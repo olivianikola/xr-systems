@@ -1,0 +1,90 @@
+{
+    "name": "myInputActions",
+    "maps": [
+        {
+            "name": "rightHandQuit",
+            "id": "cced5e8c-e03c-4798-8540-1003dfe98a86",
+            "actions": [
+                {
+                    "name": "QuitAction",
+                    "type": "Button",
+                    "id": "7b72d8e0-47cd-4819-bde9-68be74031d94",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "28e765b6-5042-4a71-ba19-ac95419e9b44",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuitAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "leftLight",
+            "id": "8acbbba5-2c5f-4f31-9c1b-a577593a8ccd",
+            "actions": [
+                {
+                    "name": "LightChange",
+                    "type": "Button",
+                    "id": "d3d61e4a-3c70-472d-a64c-89dd9ff62e99",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff57444b-5282-4cbb-9558-89d94129a610",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "leftHandLocation",
+            "id": "7d6cce98-3289-44f5-abc0-8e651a2e308c",
+            "actions": [
+                {
+                    "name": "changeLocation",
+                    "type": "Button",
+                    "id": "f1f86b8b-3a68-406c-ba4f-397037c77372",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "af46dfdb-7394-4467-a743-db74564fda4b",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "changeLocation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
