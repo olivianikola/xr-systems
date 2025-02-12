@@ -84,6 +84,62 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "LeftcustomGrab",
+            "id": "f9b92133-1553-4a01-9938-8dddaf0043d8",
+            "actions": [
+                {
+                    "name": "left",
+                    "type": "Button",
+                    "id": "b06a09e3-5c79-45a2-9adb-289fa37bc006",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b66b081f-36ba-47d1-9eb1-7455cf45beb1",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightCustomGrab",
+            "id": "374287d5-e528-47dc-bfb2-76a67213e813",
+            "actions": [
+                {
+                    "name": "right",
+                    "type": "Button",
+                    "id": "533ab872-4949-4aee-86cd-0b9589bb0745",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4f489419-7593-42ad-8457-f7f22b3a036d",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
