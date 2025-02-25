@@ -20,9 +20,6 @@ public class CustomGrab : MonoBehaviour
     private void Start()
     {
         action.action.Enable();
-        
-        prevPosition = transform.position;
-        prevRotation = transform.rotation;
 
         // Find the other hand
         foreach(CustomGrab c in transform.parent.GetComponentsInChildren<CustomGrab>())
@@ -47,26 +44,14 @@ public class CustomGrab : MonoBehaviour
                 Vector3 deltaPosition = transform.position - prevPosition;
                 Quaternion deltaRotation = transform.rotation * Quaternion.Inverse(prevRotation);
 
-                if (otherHand.grabbedObject == grabbedObject)
-                {
-                    Vector3 pos = otherHand.transform.position - otherHand.prevPosition;
-                    Quaternion rot = otherHand.transform.rotation * Quaternion.Inverse(otherHand.prevRotation);
+                grabbedObject.position += deltaPosition;
+                grabbedObject.position = transform.position + deltaRotation * (grabbedObject.position - transform.position);
+                grabbedObject.rotation = deltaRotation * grabbedObject.rotation;
 
-                    Vector3 posCombined = (deltaPosition + pos) * 0.5f;
-                    Quaternion rotCombined = deltaRotation * rot;
-
-                    grabbedObject.position += posCombined;
-                    grabbedObject.rotation = rotCombined * grabbedObject.rotation;
-                }
-                else
-                {
-                    grabbedObject.position += deltaPosition;
-                    grabbedObject.rotation = deltaRotation * grabbedObject.rotation;
-                }
+                prevPosition = transform.position;
+                prevRotation = transform.rotation;
             }
         }
-
-        
         // If let go of button, release object
         else if (grabbedObject)
             grabbedObject = null;
