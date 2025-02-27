@@ -44,7 +44,6 @@ public class HandController : MonoBehaviour
             try
             {
                 hand.SetGrip(gripAction.action.ReadValue<float>());
-                Debug.Log("Grip value read successfully.");
             }
             catch (System.Exception ex)
             {
@@ -57,7 +56,6 @@ public class HandController : MonoBehaviour
             try
             {
                 hand.SetTrigger(triggerAction.action.ReadValue<float>());
-                Debug.Log("Trigger value read successfully.");
             }
             catch (System.Exception ex)
             {
