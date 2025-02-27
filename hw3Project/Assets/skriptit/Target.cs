@@ -1,13 +1,18 @@
 using UnityEngine;
+using System.Collections;
 
 public class Target : MonoBehaviour
 {
     public int points;
+    private bool isCooldown = false;
+    public float cooldownTime = 1f; // Cooldown time in seconds
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision detected with: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("ThrowObject"))
+        if (isCooldown) return;
+
+        Debug.Log("Trigger detected with: " + other.gameObject.name);
+        if (other.gameObject.CompareTag("ThrowObject"))
         {
             Debug.Log("ThrowObject hit! Adding points: " + points);
             Scoring scoringSystem = FindObjectOfType<Scoring>();
@@ -15,6 +20,16 @@ public class Target : MonoBehaviour
             {
                 scoringSystem.AddScore(points);
             }
+
+            // Start cooldown
+            StartCoroutine(Cooldown());
         }
+    }
+
+    private IEnumerator Cooldown()
+    {
+        isCooldown = true;
+        yield return new WaitForSeconds(cooldownTime);
+        isCooldown = false;
     }
 }
