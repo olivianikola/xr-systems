@@ -2105,8 +2105,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hello! Grib buttons are in use. Idea of the game is to throw rings to
-    boxes, you win if the score is above 40
+  m_text: 'Grib buttons are in use. Idea of the game is to throw rings to boxes,
+    you win if the score is 60 or above
 
     _________________'
   m_isRightToLeft: 0
